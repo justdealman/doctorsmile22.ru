@@ -191,4 +191,13 @@ $(document).ready(function(){
     }
 
     bindingMovingEvent();
+	
+	$('nav > ul > li > ul').parent().hover(
+		function() {
+			$(this).children('ul').stop().fadeIn(200)
+		},
+		function() {
+			$(this).children('ul').stop().fadeOut(200)
+		}
+	);
 });
